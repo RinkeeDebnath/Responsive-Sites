@@ -1,3 +1,4 @@
+/* About and Navbar sectiom */
 @media (max-width:910px){
     #about-section #about-right{
         width:100%;
@@ -52,7 +53,7 @@
     }
 
     #about-section #about-left h3{
-        font-size: 0.6rem;
+        font-size: 0.7rem;
         padding-bottom: 0.4rem;
     
     }
@@ -63,17 +64,17 @@
     }
 
     #about-left #about-links{
-        padding-top: 0.2rem;
+        padding-top: 0.3rem;
         display:flex;
         gap: 8px;
     }
 
     #about-left #about-links h2{
-        font-size: 0.9rem;
+        display:none;
     }
 
     #about-links a i{
-        font-size: 1.2rem;
+        font-size: 1.8rem;
     }
 
     #about-section #about-right .img{
