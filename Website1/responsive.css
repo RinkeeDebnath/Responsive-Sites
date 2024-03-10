@@ -1,0 +1,82 @@
+@media (max-width:910px){
+    #about-section #about-right{
+        width:100%;
+        padding-right:0;
+    }
+
+    #about-section #about-left{
+        width:100%;
+        padding:5vw 4vw;
+
+    }
+
+    #about-section #about-left h1{
+        font-size: 2.8rem;
+        line-height: 60px;
+    }
+
+    #about-left #about-links h2{
+        font-size: 1.1rem;
+    }
+
+    #about-links a i{
+        font-size: 1.5rem;
+    }
+
+    #about-section #about-right .img{
+        height:400px;
+    }
+
+    #about-right .img img{
+        height:100%;
+    }
+
+}
+
+@media (max-width:600px) {
+    #navbar .links{
+        display:none;
+    }
+
+    #themeBtn{
+        display:none;
+    }
+
+    #menuBtn{
+        display:block;
+        font-size: 1.5rem;
+    }
+
+    #navbar h1{
+        font-size: 1.5rem;
+    }
+
+    #about-section #about-left h3{
+        font-size: 0.6rem;
+        padding-bottom: 0.4rem;
+    
+    }
+    
+    #about-section #about-left h1{
+        font-size: 2rem;
+        line-height: 40px;
+    }
+
+    #about-left #about-links{
+        padding-top: 0.2rem;
+        display:flex;
+        gap: 8px;
+    }
+
+    #about-left #about-links h2{
+        font-size: 0.9rem;
+    }
+
+    #about-links a i{
+        font-size: 1.2rem;
+    }
+
+    #about-section #about-right .img{
+        height:300px;
+    }
+}
