@@ -35,6 +35,21 @@
 }
 
 @media (max-width:600px) {
+
+    #loader .title {
+        font-size: 0.8rem;
+      }
+
+      .animated-intro h1 {
+        font-size: 2rem;
+        letter-spacing: 10px;
+      }
+      
+      .animated-intro h2 {
+        font-size: 2rem;
+        -webkit-text-stroke-width: 0.3px;
+      }
+
     #navbar .links{
         display:none;
     }

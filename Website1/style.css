@@ -1,169 +1,225 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Lato", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
 }
 
-body,html{
-    width:100%;
-    height:100%;
+body,
+html {
+  width: 100%;
+  height: 100%;
 }
 
-#main{
-    width:100%;
-    overflow: hidden;
+#main {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-#landing-page{
-    width:100%;
-    height: 100%;
+#loader {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: #5700ae;
+  animation: MoveLoaderUp 8s ease-out 8s forwards;
 }
 
-#navbar{
-    width:100%;
-    border: 1px solid #5700AE;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding:1vw 3.5vw;
+#loader .title {
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 2px;
+  animation: MoveUp 8s ease-out 8s forwards;
 }
 
-#navbar h1{
-    font-size: 2rem;
-    letter-spacing: -2px;
-    color: #5700AE;
+#loader .animated-intro {
+  width: 100%;
+  height: calc(100% - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-#navbar .links{
-    display: flex;
-    gap:15px;
-    padding: 0.5vw 2vw;
+.animated-intro h1 {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 4rem;
+  letter-spacing: 10px;
 }
 
-#navbar .links a{
-    text-decoration: none;
-    color:#5700AE;
-    font-size: 1.1rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    transition: 0.1s ease-in;
-}
-#navbar .links a:hover{
-    border-bottom: 2px solid #5700AE;
+.animated-intro h1:first-child {
+  transform: translateX(300%);
+  animation: moveLeft 8s linear;
 }
 
-
-#themeBtn{
-    width:2.5rem;
-    height: 2.5rem;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+.animated-intro h1:last-child {
+  transform: translateX(-300%);
+  animation: moveRight 8s linear;
 }
 
-#themeBtn i{
-    font-size: 2rem;
-    color: #5700AE;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #000;
+.animated-intro h2 {
+  text-transform: uppercase;
+  color: #5700ae;
+  font-size: 2.8rem;
+  letter-spacing: 8px;
+  line-height: 70px;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #fff;
+  animation: Rotate 0.8s linear 1 forwards,MoveUp 8s ease-out 8s forwards;
 }
 
-#menuBtn{
-    width:2.5rem;
-    height: 2.5rem;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display:none;
-    font-size: 2rem;
+#landing-page {
+  width: 100%;
+  height: 100%;
 }
 
-#about-section{
-    width:100%;
-    display: flex;
-    flex-wrap: wrap;
+#navbar {
+  width: 100%;
+  border: 1px solid #5700ae;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw 3.5vw;
 }
 
-#about-section #about-left{
-    width:55%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding:10rem 8rem;
-
+#navbar h1 {
+  font-size: 2rem;
+  letter-spacing: -2px;
+  color: #5700ae;
 }
 
-#about-section #about-left h3{
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 300;
-    padding-bottom: 0.6rem;
-
+#navbar .links {
+  display: flex;
+  gap: 15px;
+  padding: 0.5vw 2vw;
 }
 
-#about-section #about-left h1{
-    font-size: 3rem;
-    line-height: 60px;
-    font-weight: 900;
+#navbar .links a {
+  text-decoration: none;
+  color: #5700ae;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.1s ease-in;
+}
+#navbar .links a:hover {
+  border-bottom: 2px solid #5700ae;
 }
 
-#about-left h1 #fname,#about-left h1 #lname{
-color:#5700AE;
+#themeBtn {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-#about-left #about-links{
-padding-top: 1rem;
-display:flex;
-align-items: center;
-gap: 10px;
+#themeBtn i {
+  font-size: 2rem;
+  color: #5700ae;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
 }
 
-#about-left #about-links h2{
-    font-size: 1.3rem;
-    font-weight: 300;
-    letter-spacing: 2px;
+#menuBtn {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+  font-size: 2rem;
 }
 
-#about-left #about-links a{
-    text-decoration: none;
+#about-section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-#about-links a i{
-    color:#5700AE;
-    font-size: 1.7rem;
+#about-section #about-left {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10rem 8rem;
 }
 
-#github i:hover{
-    color:#010409;
-    background-color: #fff;
+#about-section #about-left h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+  padding-bottom: 0.6rem;
 }
 
-#linkedIn i:hover{
-    color:#0A66C2;
-    background-color: #fff;
+#about-section #about-left h1 {
+  font-size: 3rem;
+  line-height: 60px;
+  font-weight: 900;
 }
 
-#about-section #about-right{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width:45%;
-    padding-right:8rem;
+#about-left h1 #fname,
+#about-left h1 #lname {
+  color: #5700ae;
 }
 
-#about-section #about-right .img{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width:100%;
-    height:600px;
-    overflow: hidden;
+#about-left #about-links {
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-#about-right .img img{
-    height:90%;
+#about-left #about-links h2 {
+  font-size: 1.3rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+#about-left #about-links a {
+  text-decoration: none;
+}
+
+#about-links a i {
+  color: #5700ae;
+  font-size: 1.7rem;
+}
+
+#github i:hover {
+  color: #010409;
+  background-color: #fff;
+}
+
+#linkedIn i:hover {
+  color: #0a66c2;
+  background-color: #fff;
+}
+
+#about-section #about-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  padding-right: 8rem;
+}
+
+#about-section #about-right .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+#about-right .img img {
+  height: 90%;
 }
